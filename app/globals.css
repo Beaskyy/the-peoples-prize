@@ -1,26 +1,181 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* ── Design System Tokens ── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+
+  /* Brand palette */
+  --color-gold-50: #FFF9EB;
+  --color-gold-100: #FFF0CC;
+  --color-gold-200: #FFE099;
+  --color-gold-300: #FFD166;
+  --color-gold-400: #FFC233;
+  --color-gold-500: #D4A017;
+  --color-gold-600: #B8860B;
+  --color-gold-700: #8B6914;
+  --color-gold-800: #5E4B1D;
+  --color-gold-900: #312613;
+
+  --color-navy-50: #EEF2F7;
+  --color-navy-100: #D5DEEB;
+  --color-navy-200: #ABBDD6;
+  --color-navy-300: #819CC2;
+  --color-navy-400: #577BAD;
+  --color-navy-500: #2D5A99;
+  --color-navy-600: #1E3A5F;
+  --color-navy-700: #162D4A;
+  --color-navy-800: #0F1F35;
+  --color-navy-900: #0A1628;
+
+  --color-cream-50: #FFFDF7;
+  --color-cream-100: #FDF8ED;
+  --color-cream-200: #FAF0D8;
+  --color-cream-300: #F5E6C0;
+
+  /* Shadcn tokens */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #FFFDF7;
+  --foreground: #0A1628;
+  --card: #FFFFFF;
+  --card-foreground: #0A1628;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A1628;
+  --primary: #1E3A5F;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FDF8ED;
+  --secondary-foreground: #1E3A5F;
+  --muted: #F5F0E6;
+  --muted-foreground: #6B7280;
+  --accent: #D4A017;
+  --accent-foreground: #0A1628;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #E8E0D0;
+  --input: #E8E0D0;
+  --ring: #D4A017;
+  --radius: 0.625rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Custom Utility Classes ── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4A017 0%, #FFD166 50%, #D4A017 100%);
+  }
+  .gradient-navy {
+    background: linear-gradient(135deg, #0A1628 0%, #1E3A5F 50%, #2D5A99 100%);
+  }
+  .gradient-hero {
+    background: linear-gradient(
+      160deg,
+      #0A1628 0%,
+      #162D4A 30%,
+      #1E3A5F 60%,
+      #0F1F35 100%
+    );
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4A017, #FFD166, #D4A017);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* ── Decorative Patterns ── */
+.pattern-dots {
+  background-image: radial-gradient(
+    circle,
+    rgba(212, 160, 23, 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+/* ── Scroll-triggered fade-in ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Gold underline accent ── */
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+.gold-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #D4A017, #FFD166);
+  border-radius: 2px;
 }
