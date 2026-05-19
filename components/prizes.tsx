@@ -48,8 +48,10 @@ export default function Prizes() {
               transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
               className={`group relative overflow-hidden rounded-3xl border p-8 text-center transition-all duration-500 hover:-translate-y-2 ${
                 i === 0
-                  ? "border-gold-300/50 bg-gradient-to-b from-gold-50 to-white shadow-xl shadow-gold-500/10 hover:shadow-2xl hover:shadow-gold-500/15 lg:scale-105"
-                  : "border-gold-200/30 bg-white shadow-sm hover:shadow-xl hover:shadow-gold-500/5"
+                  ? "border-gold-300/50 bg-gradient-to-b from-gold-50 to-white shadow-xl shadow-gold-500/10 hover:shadow-2xl hover:shadow-gold-500/15 lg:scale-105 sm:order-2"
+                  : i === 1
+                  ? "border-gold-200/30 bg-white shadow-sm hover:shadow-xl hover:shadow-gold-500/5 sm:order-1"
+                  : "border-gold-200/30 bg-white shadow-sm hover:shadow-xl hover:shadow-gold-500/5 sm:order-3"
               }`}
             >
               {i === 0 && (
