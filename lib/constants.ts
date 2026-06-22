@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "The People's Prize",
+  name: "The People's Prize Foundation",
   tagline: "Restoring Belief in Learning, Excellence & Integrity",
   description:
-    "A people-owned initiative designed to restore belief in learning, excellence, and integrity among the youth of Kogi East, Nigeria. Through academic competitions, mentorship, and shared life journeys.",
+    "A people-owned foundation designed to restore belief in learning, excellence, and integrity among the youth of Kogi East, Nigeria. Through academic competitions, mentorship, and shared life journeys.",
   email: "thepeoplesprize@gmail.com",
   phone: "+2348032915719",
   phone2: "+2348102362843",
-  address: "Omaga House, Opposite Federal Polytechnic, Idah, Kogi State",
+  address: "Beside Senator(Dr.) Ahmadu Ali House, Federal Polytechnic Idah, Kogi State",
   year: 2026,
 } as const;
 
@@ -16,6 +16,7 @@ export const navLinks = [
   { label: "Competition", href: "#competition" },
   { label: "Speakers", href: "#speakers" },
   { label: "Schedule", href: "#schedule" },
+  { label: "Results", href: "#results" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
@@ -85,7 +86,7 @@ export const schedule = [
       {
         constituency: "Grand Finale",
         venue:
-          "The Multipurpose Hall, beside Admin., Federal Polytechnic Idah, Kogi State",
+          "The Multipurpose Hall, beside Senator(Dr.) Ahmadu Ali House, Federal Polytechnic Idah, Kogi State",
       },
     ],
     status: "upcoming" as const,
@@ -96,22 +97,22 @@ export const speakers = [
   {
     name: "Prof. Sunday Atawodi",
     title: "Fellow, African Academy of Sciences",
-    image: "/speakers/atawodi.jpg",
+    image: "/sunday.png",
   },
   {
     name: "Dr. Audu Saleh Dogo",
     title: "Chief Research Officer, National Cereals Research Institute, Badeggi",
-    image: "/speakers/dogo.jpg",
+    image: "/saleh.png",
   },
   {
     name: "Dr. H. Enesi Ozomarisi",
     title: "Co-Founder, NurseryCorp",
-    image: "/speakers/ozomarisi.jpg",
+    image: "/enesi.png",
   },
   {
     name: "Abdulganiyu Suleiman",
     title: "Founder & CEO, Saaaza Empire Worldwide Limited",
-    image: "/speakers/suleiman.jpg",
+    image: "/abdulganiyu.png",
   },
 ] as const;
 
@@ -136,15 +137,32 @@ export const whyItMatters = [
     icon: "GraduationCap",
   },
   {
-    title: "Mentorship & Guidance",
+    title: "Mentorship",
     description:
       "Distinguished leaders share their journeys, showing students real, attainable paths to fulfilment.",
     icon: "Compass",
   },
   {
-    title: "Breaking the Cycle",
+    title: "The Grand Finale",
     description:
-      "We restore the link between diligence and reward, reawakening belief that the future is truly boundless.",
+      "A powerful platform where authentic details on how things truly work are shared by people who have walked the path.",
     icon: "Sparkles",
+  },
+] as const;
+
+export const examResults = [
+  {
+    year: "2025",
+    title: "The People's Prize 2025 - Final Results",
+    description: "Official results for the 2025 Mathematics competition.",
+    fileUrl: "https://docs.google.com/spreadsheets/d/1ChVbChOMAT5h0LiPnuSnLf9NbZDayjAp8_Qy18HdU8s/edit?gid=1018966691#gid=1018966691",
+    dateUploaded: "2025-10-15",
+  },
+  {
+    year: "2024",
+    title: "The People's Prize 2024 - Final Results",
+    description: "Official results for the 2024 Mathematics competition.",
+    fileUrl: "#",
+    dateUploaded: "2024-10-12",
   },
 ] as const;

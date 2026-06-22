@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Star } from "lucide-react";
 import { ArrowRightIcon } from "@/components/ui/arrow-icon";
 import Link from "next/link";
-import { siteConfig, impactStats } from "@/lib/constants";
+import { impactStats } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -58,7 +58,7 @@ export default function Hero() {
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-gold-500/20 bg-gold-500/10 px-5 py-2 text-sm text-gold-300"
         >
           <Star size={14} className="text-gold-400" />
-          <span className="font-medium">Second Edition — {siteConfig.year}</span>
+          <span className="font-medium">The People&apos;s Prize Foundation</span>
         </motion.div>
 
         {/* Main headline */}

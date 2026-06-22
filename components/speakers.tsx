@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { speakers } from "@/lib/constants";
 import { Users } from "lucide-react";
+import Image from "next/image";
 
 export default function Speakers() {
   const ref = useRef(null);
@@ -32,7 +33,7 @@ export default function Speakers() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
-            Featured <span className="text-gradient-gold">Speakers</span>
+            Featured Speakers for <span className="text-gradient-gold">2026</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +41,7 @@ export default function Speakers() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg leading-relaxed text-navy-200/70"
           >
-            Distinguished leaders sharing their journeys — showing students real, attainable paths to fulfilment.
+            Distinguished leaders sharing their journeys at our 2026 events — showing students real, attainable paths to fulfilment.
           </motion.p>
         </div>
 
@@ -53,11 +54,8 @@ export default function Speakers() {
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] p-6 backdrop-blur-sm transition-all duration-500 hover:border-gold-500/20 hover:bg-white/[0.08]"
             >
-              {/* Avatar placeholder */}
-              <div className="mx-auto h-28 w-28 overflow-hidden rounded-2xl bg-gradient-to-br from-navy-600/50 to-navy-700/50 ring-2 ring-gold-500/20 transition-all duration-300 group-hover:ring-gold-500/40">
-                <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-gold-400/60">
-                  {speaker.name.split(" ").map(n => n[0]).join("")}
-                </div>
+              <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-2xl bg-navy-800 ring-2 ring-gold-500/20 transition-all duration-300 group-hover:ring-gold-500/40">
+                <Image src={speaker.image} alt={speaker.name} fill className="object-cover" />
               </div>
               <div className="mt-5 text-center">
                 <h3 className="text-base font-bold text-white">{speaker.name}</h3>
@@ -74,7 +72,7 @@ export default function Speakers() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="mt-12 text-center text-sm text-navy-300/50"
         >
-          October 9, 2026 — The Multipurpose Hall, Federal Polytechnic Idah
+          October 9, 2026 — The Multipurpose Hall, beside Senator(Dr.) Ahmadu Ali House, Federal Polytechnic Idah
         </motion.p>
       </div>
     </section>
