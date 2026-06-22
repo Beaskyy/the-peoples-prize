@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig, navLinks } from "@/lib/constants";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
 
 export default function Footer() {
@@ -14,16 +15,16 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-gold-500 to-gold-600 shadow-lg shadow-gold-500/20">
-                <span className="text-lg font-bold text-white">P</span>
+              <div className="relative flex h-12 w-12 items-center justify-center transition-transform duration-300">
+                <Image src="/logo.png" alt="The People's Prize Logo" fill className="object-contain" />
               </div>
               <div>
                 <span className="text-sm font-bold text-white leading-none block">The People&apos;s</span>
-                <span className="text-xs font-medium tracking-widest uppercase text-gold-500">Prize</span>
+                <span className="text-xs font-medium tracking-widest uppercase text-gold-500">Prize Foundation</span>
               </div>
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-300/60">
-              {siteConfig.tagline}. A people-owned initiative for the youth of Kogi East, Nigeria.
+              {siteConfig.tagline}. A people-owned foundation for the youth of Kogi East, Nigeria.
             </p>
           </div>
 
@@ -64,7 +65,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center gap-4 border-t border-white/[0.06] pt-8 sm:flex-row sm:justify-between">
           <p className="text-xs text-navy-300/40">
-            © {siteConfig.year} The People&apos;s Prize Initiative. All rights reserved.
+            © {siteConfig.year} {siteConfig.name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1 text-xs text-navy-300/40">
             Made with <Heart size={12} className="text-gold-500/60" /> for Kogi East

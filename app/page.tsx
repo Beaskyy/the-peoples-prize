@@ -5,6 +5,7 @@ import Competition from "@/components/competition";
 import Prizes from "@/components/prizes";
 import Speakers from "@/components/speakers";
 import Schedule from "@/components/schedule";
+import Results from "@/components/results";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Prizes />
         <Speakers />
         <Schedule />
+        <Results />
         <Contact />
       </main>
       <Footer />

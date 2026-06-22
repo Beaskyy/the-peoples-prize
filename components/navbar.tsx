@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { navLinks, siteConfig } from "@/lib/constants";
+import { navLinks } from "@/lib/constants";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,18 +31,17 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <Link href="#home" className="group flex items-center gap-3">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-gold-500 to-gold-600 shadow-lg shadow-gold-500/20 transition-transform duration-300 group-hover:scale-105">
-            <span className="text-lg font-bold text-white">P</span>
-            <div className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-navy-600 ring-2 ring-white" />
+          <div className="relative flex h-12 w-12 items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <Image src="/logo.png" alt="The People's Prize Logo" fill className="object-contain" />
           </div>
-          <div className={`transition-colors duration-300 ${scrolled ? "text-navy-800" : "text-white"}`}>
+          {/* <div className={`transition-colors duration-300 ${scrolled ? "text-navy-800" : "text-white"}`}>
             <span className="text-sm font-bold tracking-tight leading-none block">
               The People&apos;s
             </span>
             <span className="text-xs font-medium tracking-widest uppercase text-gold-500">
               Prize
             </span>
-          </div>
+          </div> */}
         </Link>
 
         {/* Desktop nav */}

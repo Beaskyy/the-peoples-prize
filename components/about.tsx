@@ -39,8 +39,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 font-heading text-3xl font-bold tracking-tight text-navy-800 sm:text-4xl lg:text-5xl"
           >
-            Breaking the Cycle of{" "}
-            <span className="text-gradient-gold">Despair</span>
+            Unlocking <span className="text-gradient-gold">Boundless Potential</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +107,7 @@ export default function About() {
               <div className="h-px w-8 bg-gold-500/40" />
             </div>
             <p className="mt-1 text-xs text-white/40">
-              President / Convener, The People&apos;s Prize
+              President / Convener, The People&apos;s Prize Foundation
             </p>
           </div>
         </motion.div>
