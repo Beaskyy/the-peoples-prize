@@ -107,7 +107,7 @@ export default function About() {
               <div className="h-px w-8 bg-gold-500/40" />
             </div>
             <p className="mt-1 text-xs text-white/40">
-              President / Convener, The People&apos;s Prize Foundation
+              President / Convener, The People&apos;s Prize Initiative
             </p>
           </div>
         </motion.div>

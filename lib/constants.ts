@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "The People's Prize Foundation",
+  name: "The People's Prize Initiative",
   tagline: "Restoring Belief in Learning, Excellence & Integrity",
   description:
-    "A people-owned foundation designed to restore belief in learning, excellence, and integrity among the youth of Kogi East, Nigeria. Through academic competitions, mentorship, and shared life journeys.",
+    "A people-owned intiative designed to restore belief in learning, excellence, and integrity among the youth of Kogi East, Nigeria. Through academic competitions, mentorship, and shared life journeys.",
   email: "thepeoplesprize@gmail.com",
   phone: "+2348032915719",
   phone2: "+2348102362843",
