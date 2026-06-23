@@ -35,7 +35,7 @@ export default function AdminUploadMock() {
             <Image src="/logo.png" alt="Logo" fill className="object-contain" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-navy-900">Foundation Admin</h1>
+            <h1 className="text-xl font-bold text-navy-900">Initiative Admin</h1>
             <p className="text-sm text-navy-600/70">Manage website content</p>
           </div>
         </div>

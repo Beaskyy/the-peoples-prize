@@ -20,11 +20,11 @@ export default function Footer() {
               </div>
               <div>
                 <span className="text-sm font-bold text-white leading-none block">The People&apos;s</span>
-                <span className="text-xs font-medium tracking-widest uppercase text-gold-500">Prize Foundation</span>
+                <span className="text-xs font-medium tracking-widest uppercase text-gold-500">Prize Initiative</span>
               </div>
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-300/60">
-              {siteConfig.tagline}. A people-owned foundation for the youth of Kogi East, Nigeria.
+              {siteConfig.tagline}. A people-owned initiative for the youth of Kogi East, Nigeria.
             </p>
           </div>
 
