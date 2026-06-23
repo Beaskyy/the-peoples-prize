@@ -47,7 +47,7 @@ export const prizes = [
 export const schedule = [
   {
     round: "Round 1",
-    date: "Thursday, July 2, 2026",
+    date: "Thursday, July 2, 2026 at 10:00 AM",
     description: "Federal Constituency Qualifying Round",
     venues: [
       {
@@ -67,7 +67,7 @@ export const schedule = [
   },
   {
     round: "Final Round",
-    date: "Thursday, October 8, 2026",
+    date: "Thursday, October 8, 2026 at 10:00 AM",
     description: "Top 3 from each constituency compete",
     venues: [
       {

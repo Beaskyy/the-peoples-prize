@@ -58,7 +58,7 @@ export default function Hero() {
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-gold-500/20 bg-gold-500/10 px-5 py-2 text-sm text-gold-300"
         >
           <Star size={14} className="text-gold-400" />
-          <span className="font-medium">The People&apos;s Prize Foundation</span>
+          <span className="font-medium">The People&apos;s Prize Initiative</span>
         </motion.div>
 
         {/* Main headline */}
