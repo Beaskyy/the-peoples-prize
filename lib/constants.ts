@@ -159,10 +159,11 @@ export const examResults = [
     dateUploaded: "2025-10-15",
   },
   {
-    year: "2024",
-    title: "The People's Prize 2024 - Final Results",
-    description: "Official results for the 2024 Mathematics competition.",
+    year: "2026",
+    title: "The People's Prize 2026 - Final Results",
+    description: "Official results for the 2026 Mathematics competition.",
     fileUrl: "#",
-    dateUploaded: "2024-10-12",
+    dateUploaded: "Coming Soon",
   },
+ 
 ] as const;

@@ -81,7 +81,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-navy-200/80 sm:text-xl"
         >
-          A Mathematics & English contest for the brightest young minds in Kogi East
+          A Mathematics contest for the brightest young minds in Kogi East
           — and the teachers who shape them.
         </motion.p>
 
