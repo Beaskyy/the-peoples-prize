@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -23,20 +24,25 @@ export async function POST(request: Request) {
     console.log("=========================================");
     console.log("To send an actual email, integrate with Resend/Nodemailer here.");
 
-    // TODO: Actually send an email using Resend, Nodemailer, etc.
-    // Example with Resend:
-    /*
-    import { Resend } from 'resend';
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'thepeoplesprize@gmail.com',
+    // Send email using Nodemailer
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_APP_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: 'akintobiafeez374@gmail.com',
       subject: `New Nomination from ${schoolName}`,
       html: `<p><strong>School:</strong> ${schoolName}</p>
              <p><strong>Contact:</strong> ${contactNo}</p>
              <p><strong>Nominees:</strong><br/>${nominees.replace(/\n/g, '<br/>')}</p>`
     });
-    */
+    
+    console.log("Email sent successfully via Nodemailer!");
 
     return NextResponse.json({ success: true });
   } catch (error) {
