@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_RECEIVER,
-      subject: `Nomination of Studendts from ${schoolName}`,
+      subject: `Nomination of Students from ${schoolName}`,
       html: `
         <!DOCTYPE html>
         <html>
