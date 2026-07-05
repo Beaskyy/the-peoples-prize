@@ -68,7 +68,6 @@ export async function POST(request: Request) {
               </div>
             </div>
             <div style="background-color: #fafafa; padding: 20px; text-align: center; border-top: 1px solid #e4e4e7;">
-              <p style="margin: 0; font-size: 12px; color: #a1a1aa;">This is an automated message from your application.</p>
             </div>
           </div>
         </body>
