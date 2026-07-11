@@ -6,7 +6,8 @@ export const siteConfig = {
   email: "thepeoplesprize@gmail.com",
   phone: "+2348032915719",
   phone2: "+2348102362843",
-  address: "Beside Senator(Dr.) Ahmadu Ali House, Federal Polytechnic Idah, Kogi State",
+  address:
+    "Beside Senator(Dr.) Ahmadu Ali House, Federal Polytechnic Idah, Kogi State",
   year: 2026,
 } as const;
 
@@ -101,7 +102,8 @@ export const speakers = [
   },
   {
     name: "Dr. Audu Saleh Dogo",
-    title: "Chief Research Officer, National Cereals Research Institute, Badeggi",
+    title:
+      "Chief Research Officer, National Cereals Research Institute, Badeggi",
     image: "/saleh.png",
   },
   {
@@ -152,18 +154,19 @@ export const whyItMatters = [
 
 export const examResults = [
   {
-    year: "2025",
-    title: "The People's Prize 2025 - Final Results",
-    description: "Official results for the 2025 Mathematics competition.",
-    fileUrl: "https://docs.google.com/spreadsheets/d/1ChVbChOMAT5h0LiPnuSnLf9NbZDayjAp8_Qy18HdU8s/edit?gid=1018966691#gid=1018966691",
-    dateUploaded: "2025-10-15",
-  },
-  {
     year: "2026",
     title: "The People's Prize 2026 - Final Results",
     description: "Official results for the 2026 Mathematics competition.",
-    fileUrl: "#",
-    dateUploaded: "Coming Soon",
+    fileUrl:
+      "https://docs.google.com/spreadsheets/d/1hpiJ9q4KfITW0ie4Doji00kRPoeweEr8XuhlQZ7LG5s/edit?gid=635846096#gid=635846096",
+    dateUploaded: "2026-07-11",
   },
- 
+  {
+    year: "2025",
+    title: "The People's Prize 2025 - Final Results",
+    description: "Official results for the 2025 Mathematics competition.",
+    fileUrl:
+      "https://docs.google.com/spreadsheets/d/1ChVbChOMAT5h0LiPnuSnLf9NbZDayjAp8_Qy18HdU8s/edit?gid=1018966691#gid=1018966691",
+    dateUploaded: "2025-10-15",
+  },
 ] as const;
