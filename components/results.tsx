@@ -72,11 +72,11 @@ export default function Results() {
               </div>
               <a
                 href={result.fileUrl}
-                target={result.fileUrl !== "#" ? "_blank" : undefined}
-                rel={result.fileUrl !== "#" ? "noopener noreferrer" : undefined}
+                target={(result.fileUrl as string) !== "#" ? "_blank" : undefined}
+                rel={(result.fileUrl as string) !== "#" ? "noopener noreferrer" : undefined}
                 className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-gold-200 bg-white px-5 py-2.5 text-sm font-semibold text-gold-600 shadow-sm transition-all duration-300 hover:bg-gold-50 hover:text-gold-700 sm:w-auto"
                 onClick={(e) => {
-                  if (result.fileUrl === "#") {
+                  if ((result.fileUrl as string) === "#") {
                     e.preventDefault();
                     setShowToast(true);
                     setTimeout(() => setShowToast(false), 3000);
