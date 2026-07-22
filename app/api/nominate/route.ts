@@ -15,14 +15,14 @@ export async function POST(request: Request) {
     }
 
     // --- EMAIL SIMULATION ---
-    // console.log("=========================================");
-    // console.log("🔔 NEW STUDENT NOMINATION RECEIVED");
-    // console.log("=========================================");
-    // console.log(`School: ${schoolName}`);
-    // console.log(`Contact No: ${contactNo}`);
-    // console.log(`Nominees:\n${nominees}`);
-    // console.log("=========================================");
-    // console.log("To send an actual email, integrate with Resend/Nodemailer here.");
+    console.log("=========================================");
+    console.log("🔔 NEW STUDENT NOMINATION RECEIVED");
+    console.log("=========================================");
+    console.log(`School: ${schoolName}`);
+    console.log(`Contact No: ${contactNo}`);
+    console.log(`Nominees:\n${nominees}`);
+    console.log("=========================================");
+    console.log("To send an actual email, integrate with Resend/Nodemailer here.");
 
     // Send email using Nodemailer
     const transporter = nodemailer.createTransport({
